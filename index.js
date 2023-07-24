@@ -25,9 +25,9 @@ app.use("/cart",cart)
 app.use("/address",useraddress)
 app.use('/order',order)
 
-app.listen(process.env.port,async()=>{
+app.listen(8080,async()=>{
     try {
-       mongoose.connect(process.env.mongourl) 
+       mongoose.connect("mongodb://sushantshekhar:sushantshekhar@ac-4c86m0n-shard-00-00.jrb6jlo.mongodb.net:27017,ac-4c86m0n-shard-00-01.jrb6jlo.mongodb.net:27017,ac-4c86m0n-shard-00-02.jrb6jlo.mongodb.net:27017/myntra?ssl=true&replicaSet=atlas-r7eb8e-shard-0&authSource=admin&retryWrites=true&w=majority") 
     console.log("server running at port 8080")
     } catch (error) {
        console.log(error) 
